@@ -1,0 +1,35 @@
+## =================================================
+## UNIHIKER-K10 DFRobot (Rust Port)
+## Chip: ESP32-S3-N16R8
+## Flash: 16MB QIO 80MHz
+## PSRAM: 8MB Octal-OPI
+## =================================================
+CONFIG_IDF_TARGET="esp32s3"
+
+# ---------- Flash Settings ----------
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# ---------- Octal-OPI PSRAM ----------
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+CONFIG_SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY=y
+
+# ---------- CPU & FreeRTOS ----------
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_FREERTOS_HZ=100
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+
+# ---------- Reset Settings for K10 ----------
+CONFIG_ESPTOOLPY_AFTER_RESET=noreset
+
+# ---------- Log Level ----------
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+
+# ---------- Single APP Partition Table ----------
+CONFIG_PARTITION_TABLE_SINGLE_APP=y
+CONFIG_PARTITION_TABLE_OFFSET=0x10000
+

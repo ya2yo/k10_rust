@@ -1,0 +1,22 @@
+[alias]
+xtask = "run --manifest-path xtask/Cargo.toml --target x86_64-pc-windows-msvc --"
+
+[build]
+target = "xtensa-esp32s3-espidf"
+
+[target.xtensa-esp32s3-espidf]
+linker = "ldproxy"
+runner = "espflash flash --monitor"
+rustflags = ["-C", "default-linker-libraries"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+MCU = "esp32s3"
+ESP_IDF_PATH_ISSUES = "warn"
+PYTHONUTF8 = "1"
+ESP_IDF_VERSION = "v5.2.1"
+# 若要直接复用本地ESP-IDF环境，可设置 ESP_IDF_TOOLS_INSTALL_DIR = "fromenv"
+LIBCLANG_PATH = "D:/Rust/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-clang/bin/libclang.dll"
+ESP_IDF_SDKCONFIG_DEFAULTS = { value = "sdkconfig.defaults", relative = true }

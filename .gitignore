@@ -1,0 +1,6 @@
+**/target
+Cargo.lock
+sdkconfig
+sdkconfig.old
+.embuild/
+.vscode

@@ -1,0 +1,15 @@
+[package]
+name = "k10_test"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "k10_test"
+harness = false
+
+[dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+
+[build-dependencies]
+embuild = { workspace = true }

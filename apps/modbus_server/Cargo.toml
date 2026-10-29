@@ -1,0 +1,17 @@
+[package]
+name = "modbus_server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "modbus_server"
+harness = false
+
+[dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+anyhow = { workspace = true }
+rmodbus = { workspace = true }
+
+[build-dependencies]
+embuild = { workspace = true }
