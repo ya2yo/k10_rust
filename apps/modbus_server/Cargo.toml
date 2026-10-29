@@ -12,6 +12,7 @@ log = { workspace = true }
 esp-idf-svc = { workspace = true }
 anyhow = { workspace = true }
 rmodbus = { workspace = true }
+heapless = { workspace = true }
 
 [build-dependencies]
 embuild = { workspace = true }

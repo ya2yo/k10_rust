@@ -19,6 +19,7 @@ esp-idf-svc = { version = "0.51", default-features = false, features = ["std", "
 embuild = { version = "0.32", features = ["espidf"] }
 anyhow = "1.0"
 rmodbus = "0.7"
+heapless = "0.8"
 
 [profile.release]
 opt-level = "s"
