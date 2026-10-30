@@ -50,9 +50,9 @@ OPTIONS:
 
 EXAMPLES:
     cargo xtask list
-    cargo xtask run hardware_test
+    cargo xtask run k10_test
     cargo xtask run modbus_server --port COM3
-    cargo xtask build hardware_test
+    cargo xtask build k10_test
     cargo xtask monitor --port COM3
 "#
     );
